@@ -17,10 +17,10 @@ app.post("/fetch", async (req, res) => {
       },
       body: JSON.stringify({ name: "John Doe" }),
     });
-    const res = await body.json();
+    const response = await body.json();
     console.log("statusCode", statusCode);
-    console.log("res", res);
-    return res.status(200).json(res);
+    console.log("response", response);
+    return res.status(200).json();
   } catch (error) {
     console.error(error);
   }
